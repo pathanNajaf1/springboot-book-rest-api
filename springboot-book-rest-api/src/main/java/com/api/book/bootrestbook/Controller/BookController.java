@@ -46,7 +46,8 @@ public class BookController {
 
     // Method to update a book in the list
     @PutMapping("/books/{bookid}")
-    public void updateBook(@RequestBody Book book, @PathVariable("/bookid") int bookid){
+    public void updateBook(@RequestBody Book book, @PathVariable("bookid") int bookid){
         this.bookService.updateBook(book, bookid);
     }
 }
+
